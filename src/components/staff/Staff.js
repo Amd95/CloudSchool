@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Box, Grid } from "@mui/material";
-import staffData from "../../data/staff.json";
+import data from "../../data/staff.json";
 import BookIcon from "@mui/icons-material/Book";
 
 import StaffNew from "./StaffNew";
@@ -19,12 +19,20 @@ function Staff() {
   };
 
   const [open, setOpen] = React.useState(false);
+  const [staffData, setStaffData] = React.useState(data);
   const handleClickOpen = () => {
     setOpen(true);
   };
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const handleDelete = (index) => {
+    const deletedArray = staffData.filter((item,i) => {
+      return index!=i;
+    });
+    setStaffData(deletedArray);
   };
 
   return (
@@ -34,7 +42,7 @@ function Staff() {
       </Typography>
       <Grid container spacing={3}>
         {staffData.map((item, index) => (
-          <Grid item xs={3} key={index}>
+          <Grid id={index} item xs={3} key={index}>
             <Card sx={{ maxWidth: 345 }}>
               {/* <CardMedia
         sx={{ height: 140 }}
@@ -95,7 +103,9 @@ function Staff() {
                 <Button size="small" onClick={handleClickOpen}>
                   Edit
                 </Button>
-                <Button size="small">Delete</Button>
+                <Button size="small" onClick={() => handleDelete(index)}>
+                  Delete
+                </Button>
               </CardActions>
             </Card>
           </Grid>

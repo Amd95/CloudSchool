@@ -6,18 +6,21 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Box, Grid } from "@mui/material";
-import studentData from "../../data/studentData.json";
+import data from "../../data/studentData.json";
 import BookIcon from "@mui/icons-material/Book";
 import StudentNew from "./StudentNew";
+import { useState } from "react";
 
 function Student() {
+  const [studentData, setStudentData] = useState(data);
+  const [open, setOpen] = React.useState(false);
+
   const cardFlex = {
     display: "flex",
     alignItems: "center",
     gap: "5px",
   };
 
-  const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -25,13 +28,21 @@ function Student() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const handleDelete = (index) => {
+    const deletedArray = studentData.filter((item, i) => {
+      console.log(i);
+      return index != i;
+    });
+    setStudentData(deletedArray);
+  };
   return (
     <Box sx={{ margin: "2em" }}>
       <Typography variant="h4" sx={{ margin: "1em 0" }}>
         Students <BookIcon />
       </Typography>
       <Grid container spacing={3}>
-        {studentData.map((item,index) => (
+        {studentData.map((item, index) => (
           <Grid item xs={3} key={index}>
             <Card sx={{ maxWidth: 345 }}>
               {/* <CardMedia
@@ -102,7 +113,7 @@ function Student() {
                 <Button size="small" onClick={handleClickOpen}>
                   Edit
                 </Button>
-                <Button size="small">
+                <Button size="small" onClick={() => handleDelete(index)}>
                   Delete
                 </Button>
               </CardActions>
