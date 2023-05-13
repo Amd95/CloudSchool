@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Vansh Sharma",
+    "dob": "10/09/2002",
+    "parentName": "Raman Sharma",
+    "contact": "350832585",
+    "adress": "G-Block New Delhi",
+    "admission": "11/06/2021",
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+  },
+
+  {
+    "name": "Rajat Sharma",
+    "dob": "10/09/2002",
+    "parentName": "Raman Sharma",
+    "contact": "350832585",
+    "adress": "G-Block New Delhi",
+    "admission": "11/06/2021",
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+  },
+
+  {
+    "name": "Ayush kumar",
+    "dob": "10/09/2002",
+    "parentName": "Raman Sharma",
+    "contact": "350832585",
+    "adress": "G-Block New Delhi",
+    "admission": "11/06/2021",
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+  },
+
+  {
+    "name": "Ramesh prasad",
+    "dob": "10/09/2002",
+    "parentName": "Raman Sharma",
+    "contact": "350832585",
+    "adress": "G-Block New Delhi",
+    "admission": "11/06/2021",
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+  },
+
+  {
+    "name": "Awan nagar",
+    "dob": "10/09/2002",
+    "parentName": "Raman Sharma",
+    "contact": "350832585",
+    "adress": "G-Block New Delhi",
+    "admission": "11/06/2021",
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+  },
+
+  {
+    "name": "Lakshey kumar",
+    "dob": "10/09/2002",
+    "parentName": "Raman Sharma",
+    "contact": "350832585",
+    "adress": "G-Block New Delhi",
+    "admission": "11/06/2021",
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+  },
+
+  {
+    "name": "Rohit ",
+    "dob": "10/09/2002",
+    "parentName": "Raman Sharma",
+    "contact": "350832585",
+    "adress": "G-Block New Delhi",
+    "admission": "11/06/2021",
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+  },
+  {
+    "name": "Ishan kishan",
+    "dob": "10/09/2002",
+    "parentName": "Raman Sharma",
+    "contact": "350832585",
+    "adress": "G-Block New Delhi",
+    "admission": "11/06/2021",
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+  }
+]
