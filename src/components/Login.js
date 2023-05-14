@@ -6,32 +6,40 @@ import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
-import { createTheme } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
+import studentData from "../data/studentData.json";
 
-const theme = createTheme();
 
-function Login({ loginInfo, setLoginInfo }) {
+function Login({  setLoginInfo,setStudent }) {
+
+
   const navigation = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
 
-    const email = data.get("email");
+    let email = data.get("email");
     const password = data.get("password");
 
-    if (email === "teacher@gmail.com" && password === "teacherPassword") {
+    const index = email.indexOf("@");
+    email = email.slice(0, index);
+
+    const studentMail = studentData.filter((item) => {
+      return email === item.name;
+    });
+    console.log(studentMail)
+
+    if (email === "teacher" && password === `${email}Password`) {
       setLoginInfo("student");
       navigation("/students");
-    } else if (
-      email === "faculty@gmail.com" &&
-      password === "facultyPassword"
-    ) {
+    } else if (email === "faculty" && password === `${email}Password`) {
       setLoginInfo("staff");
       navigation("/students");
+    } else if (studentMail.length!=0 && password === `${studentMail[0].name}Password`) {
+      setStudent(studentMail);
+      navigation("/studentDashboard");
     }
   };
-
 
   return (
     <Box
