@@ -14,6 +14,7 @@ import { useState } from "react";
 function Student() {
   const [studentData, setStudentData] = useState(data);
   const [open, setOpen] = React.useState(false);
+  const [dialogState, setDialogState] = useState("");
 
   const cardFlex = {
     display: "flex",
@@ -110,7 +111,13 @@ function Student() {
                 </Box>
               </CardContent>
               <CardActions>
-                <Button size="small" onClick={handleClickOpen}>
+                <Button
+                  size="small"
+                  onClick={() => {
+                    handleClickOpen();
+                    setDialogState("Edit");
+                  }}
+                >
                   Edit
                 </Button>
                 <Button size="small" onClick={() => handleDelete(index)}>
@@ -125,6 +132,8 @@ function Student() {
         open={open}
         handleClickOpen={handleClickOpen}
         handleClose={handleClose}
+        dialogState={dialogState}
+        setDialogState={setDialogState}
       />
     </Box>
   );

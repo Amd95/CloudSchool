@@ -20,6 +20,8 @@ function Staff() {
 
   const [open, setOpen] = React.useState(false);
   const [staffData, setStaffData] = React.useState(data);
+  const [dialogState, setDialogState] = React.useState("");
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -29,8 +31,8 @@ function Staff() {
   };
 
   const handleDelete = (index) => {
-    const deletedArray = staffData.filter((item,i) => {
-      return index!=i;
+    const deletedArray = staffData.filter((item, i) => {
+      return index != i;
     });
     setStaffData(deletedArray);
   };
@@ -100,7 +102,13 @@ function Staff() {
                 </Box>
               </CardContent>
               <CardActions>
-                <Button size="small" onClick={handleClickOpen}>
+                <Button
+                  size="small"
+                  onClick={() => {
+                    handleClickOpen();
+                    setDialogState("Edit");
+                  }}
+                >
                   Edit
                 </Button>
                 <Button size="small" onClick={() => handleDelete(index)}>
@@ -116,6 +124,8 @@ function Staff() {
         open={open}
         handleClickOpen={handleClickOpen}
         handleClose={handleClose}
+        dialogState={dialogState}
+        setDialogState={setDialogState}
       />
     </Box>
   );

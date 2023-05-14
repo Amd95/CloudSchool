@@ -8,12 +8,16 @@ import AddIcon from "@mui/icons-material/Add";
 import DialogContent from "@mui/material/DialogContent";
 import TextField from "@mui/material/TextField";
 
-function StaffNew({ open, handleClickOpen, handleClose }) {
+function StaffNew({ open, handleClickOpen, handleClose,  dialogState,
+  setDialogState, }) {
 
   return (
     <div>
       <Fab
-        onClick={handleClickOpen}
+               onClick={() => {
+                handleClickOpen();
+                setDialogState("Create");
+              }}
         sx={{ position: "fixed", bottom: "3%", right: "2%" }}
         color="primary"
         aria-label="add"
@@ -21,7 +25,7 @@ function StaffNew({ open, handleClickOpen, handleClose }) {
         <AddIcon />
       </Fab>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Staff </DialogTitle>
+        <DialogTitle>{dialogState} Staff </DialogTitle>
 
         <DialogContent>
           <TextField
