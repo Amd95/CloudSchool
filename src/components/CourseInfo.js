@@ -69,9 +69,12 @@ function CourseInfo() {
             </Typography>
             <Typography sx={{display:"flex",justifyContent:"center"}} variant="body2" color="text.secondary">
               {student[0].fee}
-              <span style={{ color: "green", fontWeight: "900",marginLeft:".5em" }}>
-                {student[0].payment === false ? "pending" : "paid"}
-              </span>
+              {student[0].payment===false ? <span style={{ color: "red", fontWeight: "900",marginLeft:".5em" }}>
+                Pending
+              </span>: <span style={{ color: "green", fontWeight: "900",marginLeft:".5em" }}>
+                Paid
+              </span> }
+         
             </Typography>
           </Box>
           <Box sx={cardFlex}>
