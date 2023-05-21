@@ -2,7 +2,7 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { Box, Grid } from "@mui/material";
+import { Box } from "@mui/material";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import studentData from "../data/studentData.json";
 
@@ -28,7 +28,7 @@ function CourseInfo() {
           margin: "2em 0",
 
           fontSize: "1.5rem",
-          boxShadow: "-3px 0px 18px 4px rgba(0,0,0,0.75)",
+          boxShadow: "-1px 1px 14px -2px rgba(0,0,0,0.75)",
           width: "500px",
           borderRadius: "50px ",
         }}
@@ -67,13 +67,11 @@ function CourseInfo() {
             <Typography variant="body2" color="text.secondary">
               Contact Fees. :
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Rs. 3000{" "}
-              {student[0].name === "Rajat" || "Ayush" ? (
-                <span style={{ color: "green", fontWeight: "900" }}>Paid</span>
-              ) : (
-                <span style={{ color: "red", fontWeight: "900" }}>Pending</span>
-              )}
+            <Typography sx={{display:"flex",justifyContent:"center"}} variant="body2" color="text.secondary">
+              {student[0].fee}
+              <span style={{ color: "green", fontWeight: "900",marginLeft:".5em" }}>
+                {student[0].payment === false ? "pending" : "paid"}
+              </span>
             </Typography>
           </Box>
           <Box sx={cardFlex}>

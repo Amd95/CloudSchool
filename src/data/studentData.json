@@ -6,7 +6,9 @@
     "contact": "350832585",
     "adress": "G-Block New Delhi",
     "admission": "11/06/2021",
-    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"],
+    "fee":"2332",
+    "payment":true
   },
 
   {
@@ -16,7 +18,9 @@
     "contact": "350832585",
     "adress": "G-Block New Delhi",
     "admission": "11/06/2021",
-    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"],
+    "fee":"3657",
+    "payment":false
   },
 
   {
@@ -26,55 +30,67 @@
     "contact": "350832585",
     "adress": "G-Block New Delhi",
     "admission": "11/06/2021",
-    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"],
+    "fee":"9588",
+    "payment":false
   },
 
   {
-    "name": "Ramesh prasad",
+    "name": "Ramesh ",
     "dob": "10/09/2002",
     "parentName": "Raman Sharma",
     "contact": "350832585",
     "adress": "G-Block New Delhi",
     "admission": "11/06/2021",
-    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"],
+    "fee":"5748",
+    "payment":true
   },
 
   {
-    "name": "Awan nagar",
+    "name": "Awan",
     "dob": "10/09/2002",
     "parentName": "Raman Sharma",
     "contact": "350832585",
     "adress": "G-Block New Delhi",
     "admission": "11/06/2021",
-    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"],
+    "fee":"9238",
+    "payment":false
   },
 
   {
-    "name": "Lakshey kumar",
+    "name": "Lakshey",
     "dob": "10/09/2002",
     "parentName": "Raman Sharma",
     "contact": "350832585",
     "adress": "G-Block New Delhi",
     "admission": "11/06/2021",
-    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"],
+    "fee":"3455",
+    "payment":true
   },
 
   {
-    "name": "Rohit ",
+    "name": "Rohit",
     "dob": "10/09/2002",
     "parentName": "Raman Sharma",
     "contact": "350832585",
     "adress": "G-Block New Delhi",
     "admission": "11/06/2021",
-    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"],
+    "fee":"9588",
+    "payment":false
   },
   {
-    "name": "Ishan kishan",
+    "name": "Ishan",
     "dob": "10/09/2002",
     "parentName": "Raman Sharma",
     "contact": "350832585",
     "adress": "G-Block New Delhi",
     "admission": "11/06/2021",
-    "courseList": ["English", "Hindi", "Maths", "Punjabi"]
+    "courseList": ["English", "Hindi", "Maths", "Punjabi"],
+    "fee":"9475",
+    "payment":false
   }
 ]

@@ -9,10 +9,7 @@ import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 import studentData from "../data/studentData.json";
 
-
-function Login({  setLoginInfo,setStudent }) {
-
-
+function Login({ setLoginInfo, setStudent }) {
   const navigation = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -27,7 +24,7 @@ function Login({  setLoginInfo,setStudent }) {
     const studentMail = studentData.filter((item) => {
       return email === item.name;
     });
-    console.log(studentMail)
+    console.log(studentMail);
 
     if (email === "teacher" && password === `${email}Password`) {
       setLoginInfo("student");
@@ -35,7 +32,10 @@ function Login({  setLoginInfo,setStudent }) {
     } else if (email === "faculty" && password === `${email}Password`) {
       setLoginInfo("staff");
       navigation("/students");
-    } else if (studentMail.length!=0 && password === `${studentMail[0].name}Password`) {
+    } else if (
+      studentMail.length != 0 &&
+      password === `${studentMail[0].name}Password`
+    ) {
       setStudent(studentMail);
       navigation("/studentDashboard");
     }
@@ -52,6 +52,7 @@ function Login({  setLoginInfo,setStudent }) {
         left: "50%",
         transform: "translate(-50%,-50%)",
         boxShadow: "-1px 1px 14px -2px rgba(0,0,0,0.75)",
+        backgroundColor:"white"
       }}
     >
       <CssBaseline />

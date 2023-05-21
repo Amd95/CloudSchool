@@ -27,7 +27,7 @@ function StudentDashboard({ student }) {
           margin: "2em 0",
 
           fontSize: "1.5rem",
-          boxShadow: "-3px 0px 18px 4px rgba(0,0,0,0.75)",
+          boxShadow: "-1px 1px 14px -2px rgba(0,0,0,0.75)",
           width: "500px",
           borderRadius: "50px ",
         }}

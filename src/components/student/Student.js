@@ -2,7 +2,6 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Box, Grid } from "@mui/material";
@@ -38,14 +37,14 @@ function Student() {
     setStudentData(deletedArray);
   };
   return (
-    <Box sx={{ margin: "2em" }}>
+    <Box sx={{ padding:"2em"}}>
       <Typography variant="h4" sx={{ margin: "1em 0" }}>
         Students <BookIcon />
       </Typography>
       <Grid container spacing={3}>
         {studentData.map((item, index) => (
           <Grid item xs={3} key={index}>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 345,borderRadius:"20px" }}>
               {/* <CardMedia
     sx={{ height: 140 }}
     image="/static/images/cards/contemplative-reptile.jpg"

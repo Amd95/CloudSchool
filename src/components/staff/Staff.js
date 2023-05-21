@@ -38,14 +38,14 @@ function Staff() {
   };
 
   return (
-    <Box sx={{ margin: "2em" }}>
+    <Box sx={{ padding:"2em"}}>
       <Typography variant="h4" sx={{ margin: "1em 0" }}>
         Staff <BookIcon />
       </Typography>
       <Grid container spacing={3}>
         {staffData.map((item, index) => (
           <Grid id={index} item xs={3} key={index}>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 345 ,borderRadius:"20px"}}>
               {/* <CardMedia
         sx={{ height: 140 }}
         image="/static/images/cards/contemplative-reptile.jpg"

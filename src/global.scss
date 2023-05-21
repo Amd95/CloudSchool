@@ -5,3 +5,11 @@
     margin: 0;
     padding: 0;
 }
+
+.App{
+    min-height: 120vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.251) ), url(./images/children.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
