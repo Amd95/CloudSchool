@@ -5,6 +5,7 @@ import CardPage from "./components/CardPage";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
 import StudentDashboard from "./components/StudentDashboard";
+import CourseInfo from "./components/CourseInfo";
 
 function App() {
   const [loginInfo, setLoginInfo] = useState("");
@@ -28,6 +29,10 @@ function App() {
         <Route
           path="studentDashboard"
           element={<StudentDashboard student={student} />}
+        />
+        <Route
+          path="studentDashboard/courses"
+          element={<CourseInfo student={student} />}
         />
       </Routes>
     </div>

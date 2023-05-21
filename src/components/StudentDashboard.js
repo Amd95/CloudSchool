@@ -4,6 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { Box, Grid } from "@mui/material";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 
 function StudentDashboard({ student }) {
   const cardFlex = {
@@ -12,6 +13,9 @@ function StudentDashboard({ student }) {
     marginLeft: "5em",
     marginBottom: ".5em",
   };
+
+  sessionStorage.setItem("currentStudent", student[0].name);
+
   return (
     <div style={{ backgroundColor: "red", margin: "0 auto" }}>
       <Card
@@ -90,9 +94,31 @@ function StudentDashboard({ student }) {
             <Typography variant="body2" color="text.secondary">
               Courses :
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {student[0].courseList+""}
-            </Typography>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <Typography variant="body2" color="text.secondary">
+                {student[0].courseList + ""}
+              </Typography>
+              <a
+                href="studentDashboard/courses"
+                style={{ textDecoration: "none" }}
+              >
+                <div
+                  style={{
+                    color: "#5465ff",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "5px",
+                    border: "1px solid #5465ff",
+                    padding: "5px",
+                    borderRadius: "10px",
+                    cursor: "pointer",
+                  }}
+                >
+                  <span style={{ fontSize: "12px" }}>Course Info</span>
+                  <ArrowCircleRightIcon fontSize="small" />
+                </div>
+              </a>
+            </div>
           </Box>
         </CardContent>
       </Card>
