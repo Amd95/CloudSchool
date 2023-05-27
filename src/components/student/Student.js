@@ -46,11 +46,7 @@ function Student() {
         {studentData.map((item, index) => (
           <Grid item xs={3} key={index}>
             <Card sx={{ maxWidth: 345 }}>
-              {/* <CardMedia
-    sx={{ height: 140 }}
-    image="/static/images/cards/contemplative-reptile.jpg"
-    title="green iguana"
-  /> */}
+
 
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
